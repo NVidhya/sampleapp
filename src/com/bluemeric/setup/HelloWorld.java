@@ -1,8 +1,9 @@
-package com.trov.setup;
+package com.bluemeric.setup;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 @Path("/")
@@ -36,5 +37,19 @@ public class HelloWorld {
   public String sayHelloWorld2() {
 	  return "<html> " + "<title>" + "Hello World" + "</title>"
 		        + "<body><h1>" + "Hello World" + "</body></h1>" + "</html> ";
+  }
+  
+  @GET
+  @Path("/helloworld3")
+  @Produces(MediaType.TEXT_PLAIN)
+  public String sayHelloWorld3 (@QueryParam("name") String name) {
+	  return "Hello World " + name;
+  }
+  
+  @GET
+  @Path("/helloworld4")
+  @Produces(MediaType.TEXT_PLAIN)
+  public String sayHelloWorld4 (@QueryParam("name") String name) {
+	  return "Hello World Testing";
   }
 } 
