@@ -36,7 +36,7 @@ public class HelloWorld {
   @Produces(MediaType.TEXT_HTML)
   public String sayHelloWorld2() {
 	  return "<html> " + "<title>" + "Hello World" + "</title>"
-		        + "<body><h1>" + "Hello World! Welcome to Bluemeric Demo!" + "</body></h1>" + "</html> ";
+		        + "<body><h1>" + "Hello World! Welcome to Bluemeric Demo2!" + "</body></h1>" + "</html> ";
   }
   
   @GET
