@@ -10,19 +10,20 @@
         <property name="web-directory" value="WebContent" />
         <property name="web-xml-file" value="WebContent/WEB-INF/web.xml" />
 		<property name="libs" location="WebContent/WEB-INF/lib" />
+		<property name="build-directory" value="/var/lib/tomcat6/webapps" />
         <tstamp prefix="build-info">
                 <format property="current-date" pattern="d-MMMM-yyyy" locale="en" />
                 <format property="current-time" pattern="hh:mm:ss a z" locale="en" />
         </tstamp>
-        <property name="build-directory" value="/var/lib/tomcat6/webapps" />
-	 <target name="clean">
-        <delete dir="build"/>
-    </target>
+        
+		<target name="clean">
+        	<delete dir="build"/>
+    	</target>
 
-  	<target name="compile" depends="clean">
-        <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes" classpathref="classes" />
-    </target>
+  		<target name="compile" depends="clean">
+        	<mkdir dir="build/classes"/>
+        	<javac srcdir="src" destdir="build/classes" classpathref="classes" />
+    	</target>
 
         <path id="classes">
                 <pathelement path="${classpath}" />
