@@ -28,7 +28,7 @@ public class HelloWorld {
   @Path("/helloworld1")
   @Produces(MediaType.TEXT_XML)
   public String sayHelloWorld1() {
-    return "<?xml version=\"1.0\"?>" + "<hello> Hello World vidhya" + "</hello>";
+    return "<?xml version=\"1.0\"?>" + "<hello> Hello World Bluemeric" + "</hello>";
   }
   
   @GET
