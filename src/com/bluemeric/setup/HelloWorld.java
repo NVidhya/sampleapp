@@ -24,32 +24,19 @@ public class HelloWorld {
     return "<?xml version=\"1.0\"?>" + "<hello> Hello World" + "</hello>";
   }
 
+  
   @GET
   @Path("/helloworld1")
-  @Produces(MediaType.TEXT_XML)
-  public String sayHelloWorld1() {
-    return "<?xml version=\"1.0\"?>" + "<hello> Hello World Bluemeric" + "</hello>";
+  @Produces(MediaType.TEXT_HTML)
+  public String sayHelloWorld2() {
+	  return "<html> " + "<title>" + "Hello World" + "</title>"
+		        + "<body><h1>" + "Hello World! Welcome to Bluemeric Demo!" + "</body></h1>" + "</html> ";
   }
   
   @GET
   @Path("/helloworld2")
-  @Produces(MediaType.TEXT_HTML)
-  public String sayHelloWorld2() {
-	  return "<html> " + "<title>" + "Hello World" + "</title>"
-		        + "<body><h1>" + "Hello World! Welcome to Bluemeric Demo1!" + "</body></h1>" + "</html> ";
-  }
-  
-  @GET
-  @Path("/helloworld3")
   @Produces(MediaType.TEXT_PLAIN)
   public String sayHelloWorld3 (@QueryParam("name") String name) {
 	  return "Hello World " + name;
-  }
-  
-  @GET
-  @Path("/helloworld4")
-  @Produces(MediaType.TEXT_PLAIN)
-  public String sayHelloWorld4 (@QueryParam("name") String name) {
-	  return "Hello World Testing";
   }
 } 
