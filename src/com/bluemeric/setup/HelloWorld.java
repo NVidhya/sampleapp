@@ -12,7 +12,7 @@ public class HelloWorld {
   @GET
   @Path("/helloworld")
   @Produces(MediaType.TEXT_PLAIN)
-  public String sayHelloWorld1() {
+  public String sayHelloWorld() {
     return "Hello World" ;
   } 
 
